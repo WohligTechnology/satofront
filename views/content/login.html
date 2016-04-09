@@ -1,3 +1,50 @@
-<p>
-  awzsexdrcftvgybhunjimk
-</p>
+<div class="page-signin">
+  <div class="signin-header">
+    <div class="container text-center">
+      <section class="logo main-logo">
+        <a href="#/"><span class="color-white">
+          <h1 class="logo">Stal</span>wart</h1>
+        </a>
+      </section>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="signin-body">
+          <div class="form-container">
+            <form class="form-horizontal">
+              <fieldset>
+                <div class="form-group">
+                  <div class="head">
+                    Login
+                  </div>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon">
+                      <i class="fa fa-envlope"></i>
+                    </span>
+                    <input type="email" class="form-control" placeholder="Email" ng-model="login.email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                    <input type="password" class="form-control" placeholder="Password" ng-model="login.password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" ng-click="verifylogin();" class="btn btn-primary btn-lg btn-block">Login</button>
+                </div>
+                <div class="form-group text-center">
+                  <span ng-if="isValidLogin==0" class="color-red">Invalid Login Credentials</span>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,21 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic,400italic);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
-
 /* Bootstrap Variables Goes Here */
-
 $brand-primary: #0d9dff !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
-
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 body {
+  font-family: "Lato";
+  font-weight: normal;
+}
+.pt70 {
   padding-top: 70px;
 }
 img.loading {
@@ -34,6 +35,32 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
-
+@font-face {
+  font-family: "Orkney";
+  src: url("../fonts/Orkney-Light.otf");
+}
+a {
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.logo {
+  font-family: "Orkney";
+  font-size: 55px;
+}
+.head {
+  font-size: 28px;
+}
+.signin-header {
+  padding: 40px 0;
+}
+.input-lg,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.btn {
+  border-radius: 0;
+}
 /* Start writing sass here */
 @import "fancybox-override";
