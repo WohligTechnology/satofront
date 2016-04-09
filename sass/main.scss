@@ -62,7 +62,8 @@ a {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .btn,
-.form-control {
+.form-control,
+.panel {
   border-radius: 0;
   @include box-shadow(none);
 }
@@ -70,6 +71,26 @@ a {
   border-color: $brand-primary;
   outline: 0;
   @include box-shadow(none);
+}
+.navbar-default .navbar-toggle {
+  display: block;
+  border-color: transparent;
+  z-index: 111;
+  position: relative;
+  float: none;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+  width: 250px;
+  height: 100vh;
+}
+.sidemenu {
+  padding-left: 270px;
+}
+.fixtures {
+  padding: 20px;
+}
+.pd20{
+  padding: 20px;
 }
 /* Start writing sass here */
 @import "fancybox-override";

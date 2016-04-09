@@ -9,43 +9,32 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function() {
   var navigation = [{
-      name: "Home",
-      classis: "active",
-      anchor: "home",
-      subnav: [{
-        name: "Subnav1",
-        classis: "active",
-        link: "#/home"
-      }]
-    }, {
-      name: "Create Match",
-      classis: "active",
-      anchor: "creatematch",
-    }, {
-      name: "Edit Match",
-      classis: "active",
-      anchor: "editmatch",
-    }, {
-      name: "Edit Match",
-      classis: "active",
-      anchor: "editmatch",
-    }
-  ];
+    name: "Home",
+    classis: "active",
+    anchor: "home",
+  }, {
+    name: "Create Match",
+    classis: "active",
+    anchor: "creatematch",
+  }, {
+    name: "Edit Match",
+    classis: "active",
+    anchor: "editmatch",
+  }];
 
-return {
-  getnav: function() {
-    return navigation;
-  },
-  makeactive: function(menuname) {
-    for (var i = 0; i < navigation.length; i++) {
-      if (navigation[i].name == menuname) {
-        navigation[i].classis = "active";
-      } else {
-        navigation[i].classis = "";
+  return {
+    getnav: function() {
+      return navigation;
+    },
+    makeactive: function(menuname) {
+      for (var i = 0; i < navigation.length; i++) {
+        if (navigation[i].name == menuname) {
+          navigation[i].classis = "active";
+        } else {
+          navigation[i].classis = "";
+        }
       }
-    }
-    return menuname;
-  },
-
-};
+      return menuname;
+    },
+  };
 });
