@@ -6,7 +6,7 @@
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 /* Bootstrap Variables Goes Here */
-$brand-primary: #0d9dff !default;
+$brand-primary: #3e50b4 !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
@@ -47,7 +47,9 @@ a {
 }
 .logo {
   font-family: "Orkney";
-  font-size: 55px;
+  h1 {
+    font-size: 55px;
+  }
 }
 .head {
   font-size: 28px;
@@ -59,8 +61,15 @@ a {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
-.btn {
+.btn,
+.form-control {
   border-radius: 0;
+  @include box-shadow(none);
+}
+.form-control:focus {
+  border-color: $brand-primary;
+  outline: 0;
+  @include box-shadow(none);
 }
 /* Start writing sass here */
 @import "fancybox-override";

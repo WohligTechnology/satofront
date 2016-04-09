@@ -10,6 +10,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
   $stateProvider
+    .state('home', {
+      url: "/home",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
+    })
     .state('login', {
       url: "/login",
       templateUrl: "views/template.html",
@@ -28,11 +33,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     controller: 'EditMatchCtrl'
   })
 
-  .state('home', {
-    url: "/home",
-    templateUrl: "views/template.html",
-    controller: 'HomeCtrl'
-  });
+  ;
   $urlRouterProvider.otherwise("/home");
   $locationProvider.html5Mode(isproduction);
 });
